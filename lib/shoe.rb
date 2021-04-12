@@ -1,8 +1,9 @@
 class Shoe
   attr_accessor :color, :size, :material, :condition
-  attr_reader :brand
+  attr_reader :brand, :all_brands, :unique_brands
 
-  BRANDS = []
+  ALL_BRANDS = []
+  UNIQUE_BRAND = []
 
   def initialize(brand)
     @brand = brand
@@ -13,9 +14,5 @@ class Shoe
     puts "Your shoe is as good as new!"
   end
 
-  def brand=(brand)
-    @brand = brand
-    BRANDS << brand
-  end
-
+  
 end
