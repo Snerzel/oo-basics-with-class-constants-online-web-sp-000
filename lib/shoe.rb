@@ -1,12 +1,15 @@
 class Shoe
   attr_accessor :color, :size, :material, :condition
-  attr_reader :brand, :all_brands, :unique_brands
+  attr_reader :brand
 
-  ALL_BRANDS = []
-  UNIQUE_BRANDS = []
+  BRANDS = []
+  
 
   def initialize(brand)
     @brand = brand
+    if !(BRANDS.include?(@brand))
+      BRANDS << @brand
+    end
   end
 
   def cobble
